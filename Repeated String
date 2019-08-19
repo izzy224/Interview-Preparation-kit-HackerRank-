@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+#include <cstdint>
+
+using namespace std;
+
+uint64_t repeatedString(string s, uint64_t n) { 
+uint64_t res=0;
+for (int i=0;i<s.length();i++){
+    if (s[i]=='a')
+    res++;
+}
+
+res=res*(n/s.length());
+if (n%s.length()!=0){
+    for(int i=0;i<n%s.length();i++){
+    if(s[i]=='a')
+    res++;
+    }
+}
+cout<<res;
+return 0;
+}
+int main()
+{
+    string s;
+    getline(cin, s);
+    uint64_t n;
+    cin >> n;
+repeatedString(s,n);
+
+    return 0;
+}
