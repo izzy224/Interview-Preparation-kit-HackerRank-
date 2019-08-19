@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+int rotLeft(int a[], int num,int rot) {
+for(int i = 0; i < num; i++)
+cin >> a[(num-rot+i)%num];
+for (int i =0;i<num;i++)
+cout<<a[i]<<" ";
+return 0;
+}
+
+int main()
+{
+int a[1000001]={0};
+int num,rot;
+cin>>num;
+cin>>rot;
+rotLeft(a,num,rot);
+}
